@@ -116,7 +116,7 @@ export default function LandingStats() {
   return (
     <Box
       sx={{
-        py: { xs: 8, md: 12 },
+        py: { xs: 0, md: 12 },
         background: 'linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%)',
         position: 'relative',
         overflow: 'hidden',
@@ -170,13 +170,12 @@ export default function LandingStats() {
             {stats.map((stat, index) => {
               const count = useCountUp(stat.target, 2000, index * 300, isVisible);
               return (
-                <Grid item xs={12} sm={6} md={4} key={index}>
+                <Grid item xs={12} sm={6} md={4} sx={{width:{xs:'100%',md:'20%'}}} key={index}>
                   <Grow in timeout={1000 + index * 200}>
                     <Paper
                       elevation={0}
                       sx={{
                         p: { xs: 4, md: 5 },
-                        
                         textAlign: 'center',
                         position: 'relative',
                         borderRadius: 4,
